@@ -41,10 +41,6 @@ export default {
     }
   },
   methods: {
-    selectSticker(sticker) {
-      this.dialog = false
-      this.$emit('selectedSticker', sticker)
-    },
     settingsDownload() {
       this.dialog = false
       this.$emit('settingsDownload', {
