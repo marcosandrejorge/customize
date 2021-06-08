@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Merriweather:wght@300&family=Nunito:wght@200&family=Odibee+Sans&family=Pacifico&family=Shadows+Into+Light&family=Sigmar+One&family=Stint+Ultra+Condensed&display=swap');
+
+$fontDancingScript: 'Dancing Script', cursive;
+$fontIndieFlower: 'Indie Flower', cursive;
+$fontMerriweather: 'Merriweather', serif;
+$fontNunito: 'Nunito', sans-serif;
+$fontOdibeeSans: 'Odibee Sans', cursive;
+$fontPacifico: 'Pacifico', cursive;
+$fontShadowsIntoLight: 'Shadows Into Light', cursive;
+$fontSigmarOne: 'Sigmar One', cursive;
+$fontStintUltraCondensed: 'Stint Ultra Condensed', cursive;
+
+$deg: 360;
+@mixin rotate-x {
+  @for $i from 1 through $deg {
+    .rotate-#{$i} {
+      transform: rotate(#{$i}deg);
+    }
+  }
+}
+@include rotate-x;
+
+.font-dancing-script {
+  font-family: $fontDancingScript;
+}
+.font-indie-flower {
+  font-family: $fontIndieFlower;
+}
+.font-merriweather {
+  font-family: $fontMerriweather;
+}
+.font-nunito {
+  font-family: $fontNunito;
+}
+.font-odibee-sans {
+  font-family: $fontOdibeeSans;
+}
+.font-pacifico {
+  font-family: $fontPacifico;
+}
+.font-shadows-into-light {
+  font-family: $fontShadowsIntoLight;
+}
+.font-sigmar-one {
+  font-family: $fontSigmarOne;
+}
+.font-stint-ultra-condensed {
+  font-family: $fontStintUltraCondensed;
+}
+.box {
+  position: relative;
+  width: 475px;
+  height: 840px;
+  background-color: blueviolet;
+  overflow: hidden;
+}
+.img,
+.text,
+.sticker,
+.box-img-sticker {
+  position: absolute;
+  & .sticker,
+  .box-img-sticker {
+    display: block;
+  }
+}
+.sticker,
+.v-card-img {
+  object-fit: contain;
+}
+
+.included .v-input__slot {
+  transform: scale(0.95);
+}
+
+.included .v-toolbar__extension {
+  padding: 0;
+}
+
+.no-box-top.v-sheet.v-toolbar:not(.v-sheet--outlined) {
+  box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%);
+}
+.no-flex {
+  flex: none;
+}
