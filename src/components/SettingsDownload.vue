@@ -29,9 +29,7 @@
 </template>
 
 <script>
-import mixinSticker from '../mixins/mixinSticker'
 export default {
-  mixins: [mixinSticker],
   data() {
     return {
       dialog: false,
